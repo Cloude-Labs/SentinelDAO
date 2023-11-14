@@ -4,8 +4,21 @@ module.exports = {
     images: {
         domains: ['example.com'], // Added support for external image domains
     },
-    i18n: { // Added internationalization support
-        locales: ['en', 'es'], // Supported languages
-        defaultLocale: 'en', // Default language
+    i18n: {
+        locales: ['en', 'es'],
+        defaultLocale: 'en',
+    },
+    async headers() {
+        return [
+            {
+                source: "/(.*)",
+                headers: [
+                    { key: "X-Frame-Options", value: "DENY" },
+                    { key: "X-XSS-Protection", value: "1; mode=block" },
+                    { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+                    { key: "Strict-Transport-Security", value: "max-age=31536000; includeSubDomains; preload" }
+                ],
+            },
+        ];
     },
 };
