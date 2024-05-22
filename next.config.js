@@ -1,13 +1,15 @@
 module.exports = {
     reactStrictMode: true,
-    poweredByHeader: false, // Disabled Next.js powered-by header for security
+    poweredByHeader: false,
     images: {
-        domains: ['example.com'], // Added support for external image domains
+        domains: ['example.com'],
+        unoptimized: false, // Enables Next.js native image optimization
     },
     i18n: {
         locales: ['en', 'es'],
         defaultLocale: 'en',
     },
+    trailingSlash: true, // Adds trailing slashes for static exports
     async headers() {
         return [
             {
