@@ -3,13 +3,13 @@ module.exports = {
     poweredByHeader: false,
     images: {
         domains: ['example.com'],
-        unoptimized: false, // Enables Next.js native image optimization
+        unoptimized: false,
     },
     i18n: {
         locales: ['en', 'es'],
         defaultLocale: 'en',
     },
-    trailingSlash: true, // Adds trailing slashes for static exports
+    trailingSlash: true,
     async headers() {
         return [
             {
@@ -21,6 +21,12 @@ module.exports = {
                     { key: "Strict-Transport-Security", value: "max-age=31536000; includeSubDomains; preload" }
                 ],
             },
+        ];
+    },
+    async rewrites() {
+        return [
+            { source: "/api/users", destination: "/api/v1/users" }, // Shorten API paths
+            { source: "/api/posts", destination: "/api/v1/posts" },
         ];
     },
 };
