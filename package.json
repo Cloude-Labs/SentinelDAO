@@ -9,7 +9,8 @@
     "lint": "next lint",
     "format": "prettier --write .",
     "test": "jest",
-    "prepare": "husky install" // Added Husky setup script
+    "prepare": "husky install",
+    "commit": "cz" // Added Commitizen script
   },
   "dependencies": {
     "next": "latest",
@@ -24,8 +25,15 @@
     "jest": "latest",
     "ts-jest": "latest",
     "@types/jest": "latest",
-    "husky": "latest", // Added Husky for Git hooks
-    "lint-staged": "latest" // Added lint-staged for pre-commit checks
+    "husky": "latest",
+    "lint-staged": "latest",
+    "commitizen": "latest", // Added Commitizen for commit formatting
+    "cz-conventional-changelog": "latest" // Conventional commit messages
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   },
   "lint-staged": {
     "*.ts": ["eslint --fix", "prettier --write"],
