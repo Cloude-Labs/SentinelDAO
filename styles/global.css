@@ -19,34 +19,43 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-h1, h2, h3 {
-  color: var(--text-color);
-  font-weight: bold;
-}
-
-button {
-  transition: all 0.3s ease;
-  cursor: pointer;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1rem;
-}
-
-button:hover {
-  opacity: 0.8;
-}
-
-/* Dark Mode Toggle */
-.toggle-dark-mode {
-  padding: 10px 15px;
-  cursor: pointer;
-  border: none;
+/* Buttons */
+.button {
+  display: inline-block;
+  padding: 12px 24px;
   background-color: var(--accent-color);
-  color: var(--text-color);
-  font-size: 16px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
   border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
-.toggle-dark-mode:hover {
+.button:hover {
   background-color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+/* Ripple Effect */
+.button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease-in-out;
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+}
+
+.button:active::before {
+  transform: translate(-50%, -50%) scale(1);
 }
