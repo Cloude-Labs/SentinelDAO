@@ -6,11 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint --fix .", // Updated lint command
     "format": "prettier --write .",
     "test": "jest",
     "prepare": "husky install",
-    "commit": "cz" // Added Commitizen script
+    "commit": "cz"
   },
   "dependencies": {
     "next": "latest",
@@ -27,8 +27,15 @@
     "@types/jest": "latest",
     "husky": "latest",
     "lint-staged": "latest",
-    "commitizen": "latest", // Added Commitizen for commit formatting
-    "cz-conventional-changelog": "latest" // Conventional commit messages
+    "commitizen": "latest",
+    "cz-conventional-changelog": "latest"
+  },
+  "eslintConfig": {
+    "extends": ["next/core-web-vitals"],
+    "rules": {
+      "no-console": "warn",
+      "react/no-unescaped-entities": "off"
+    }
   },
   "config": {
     "commitizen": {
@@ -38,12 +45,5 @@
   "lint-staged": {
     "*.ts": ["eslint --fix", "prettier --write"],
     "*.tsx": ["eslint --fix", "prettier --write"]
-  },
-  "prettier": {
-    "singleQuote": true,
-    "semi": false,
-    "trailingComma": "es5",
-    "tabWidth": 2,
-    "printWidth": 80
   }
 }
