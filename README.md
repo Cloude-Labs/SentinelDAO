@@ -1,3 +1,4 @@
+![DAOGENT Banner](https://github.com/Cloude-Labs/SentinelDAO/blob/0adea593fe463d9dd6ac0385985a63d2466b839e/Untitled%20design.png)
 # SentinelDAO
 
 SentinelDAO is a **decentralized AI security auditor** that evaluates **smart contracts, blockchain protocols, and DeFi projects** for vulnerabilities and inefficiencies. The platform integrates **AI-driven risk assessment, governance-powered security decisions, and bounty incentives** for community engagement.
