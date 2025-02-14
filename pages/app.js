@@ -1,5 +1,14 @@
-import '../styles/globals.css';
+import { useEffect } from "react";
+import "../styles/globals.css";
 
 export default function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  useEffect(() => {
+    console.log("Page mounted:", Component.name);
+  }, []);
+
+  return (
+    <main>
+      <Component {...pageProps} />
+    </main>
+  );
 }
