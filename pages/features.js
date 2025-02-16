@@ -7,6 +7,7 @@ export default function Features() {
         <li>Decentralized governance for audit prioritization</li>
         <li>Real-time security monitoring</li>
         <li>Automated compliance reports</li> {/* Newly added feature */}
+        <li>Detailed audit logs with transparency</li> {/* Added new feature */}
       </ul>
     </div>
   );
