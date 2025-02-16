@@ -29,7 +29,9 @@ export default function MyApp({ Component, pageProps }) {
       >
         Toggle Dark Mode
       </button>
-      <Component {...pageProps} />
+      <div className="transition-colors duration-500 ease-in-out"> {/* Added transition for smooth dark mode */}
+        <Component {...pageProps} />
+      </div>
     </main>
   );
 }
