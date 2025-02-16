@@ -18,5 +18,12 @@
     "eslint": "latest",
     "eslint-config-next": "latest",
     "prettier": "latest" // Added Prettier for code formatting
+  },
+  {
+  "singleQuote": true,
+  "semi": false,
+  "trailingComma": "es5",
+  "tabWidth": 2,
+  "printWidth": 80
   }
 }
