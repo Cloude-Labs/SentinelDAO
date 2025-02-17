@@ -8,6 +8,8 @@ export default function Features() {
         <li>Real-time security monitoring</li>
         <li>Automated compliance reports</li> {/* Newly added feature */}
         <li>Detailed audit logs with transparency</li> {/* Added new feature */}
+        <li>Scalable audit system for large decentralized platforms</li> {/* Added scalability feature */}
+        <li>Customizable security policies for organizations</li> {/* Added customization feature */}
       </ul>
     </div>
   );
