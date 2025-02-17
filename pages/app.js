@@ -7,10 +7,13 @@ export default function MyApp({ Component, pageProps }) {
   useEffect(() => {
     console.log("Page mounted:", Component.name);
     
-    // Load dark mode preference from local storage
+    // Check for system theme preference and load dark mode from local storage
     const savedTheme = localStorage.getItem("darkMode");
     if (savedTheme) {
       setDarkMode(savedTheme === "true");
+    } else {
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      setDarkMode(prefersDark);
     }
   }, []);
 
