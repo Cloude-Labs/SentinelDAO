@@ -4,4 +4,8 @@ module.exports = {
     images: {
         domains: ['example.com'], // Added support for external image domains
     },
+    i18n: { // Added internationalization support
+        locales: ['en', 'es'], // Supported languages
+        defaultLocale: 'en', // Default language
+    },
 };
