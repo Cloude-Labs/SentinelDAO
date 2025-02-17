@@ -11,6 +11,24 @@ export default function About() {
       >
         Learn More
       </a>
+
+      {/* Added section for benefits */}
+      <section className="mt-10">
+        <h3 className="text-2xl font-semibold">Why SentinelDAO?</h3>
+        <ul className="mt-4 space-y-2 text-left">
+          <li>🔒 Advanced AI-powered audits for improved contract security</li>
+          <li>⚡ Real-time analysis to identify vulnerabilities</li>
+          <li>💡 Transparent and immutable auditing results</li>
+        </ul>
+      </section>
+
+      {/* Added Explore Features button */}
+      <a 
+        href="https://sentineldao.io/features" 
+        className="mt-6 inline-block px-6 py-3 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 transition"
+      >
+        Explore Features
+      </a>
     </div>
   );
 }
