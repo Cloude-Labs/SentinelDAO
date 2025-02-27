@@ -6,11 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint --fix .", // Updated lint command
+    "lint": "eslint --fix .",
     "format": "prettier --write .",
     "test": "jest",
     "prepare": "husky install",
-    "commit": "cz"
+    "commit": "cz",
+    "storybook": "storybook dev -p 6006" // Added Storybook command
   },
   "dependencies": {
     "next": "latest",
@@ -28,7 +29,8 @@
     "husky": "latest",
     "lint-staged": "latest",
     "commitizen": "latest",
-    "cz-conventional-changelog": "latest"
+    "cz-conventional-changelog": "latest",
+    "@storybook/react": "latest" // Added Storybook dependency
   },
   "eslintConfig": {
     "extends": ["next/core-web-vitals"],
